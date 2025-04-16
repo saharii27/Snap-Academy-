@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tech for Everyone | Home</title>
+    <meta name="description" content="A catalog of free tech learning tools for girls and underserved communities." />
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="scripts.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    <header class="main-header">
+      <h1 class="title">Tech for Everyone</h1>
+    </header>
+
+    <div class="top-buttons">
+      <button onclick="location.href='about.html'">📌 About Developer</button>
+      <button onclick="location.href='contact.html'">📧 Contact Me</button>
+    </div>
+    
+    
+
+    <p class="intro">
+      This catalog features free and accessible tech learning tools built for girls and learners from underserved communities. Explore, learn, and code your way toward opportunity, no matter where you are.
+    </p>
+
+    <div class="controls">
+      <input type="text" id="searchInput" placeholder="Search resources..." />
+      <button onclick="searchResources(document.getElementById('searchInput').value)">🔍 Search</button>
+
+      <select onchange="filterByCategory(this.value)">
+        <option value="">Filter by Category</option>
+        <option value="Coding">Coding</option>
+        <option value="Web Development">Web Development</option>
+        <option value="Creative Coding">Creative Coding</option>
+        <option value="Women in Tech">Women in Tech</option>
+        <option value="Offline Friendly">Offline Friendly</option>
+      </select>
+
+
+      <button onclick="sortByName()">⬇️ Sort A–Z</button>
+      <button onclick="resetFilters()">🔁 Reset</button>
+    
+
+    </div>
+
+    <div id="card-container"></div>
+
+    <div class="card" style="display: none">
+      <div class="card-content">
+        <h2>Resource Title</h2>
+        <img src="" alt="Resource Logo" />
+        <ul>
+          <li>Bullet Point 1</li>
+          <li>Bullet Point 2</li>
+          <li>Bullet Point 3</li>
+        </ul>
+      </div>
+    </div>
+
+  
